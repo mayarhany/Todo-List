@@ -80,6 +80,9 @@ function UpdateTodo(){
     todos[updateIndex] = input.value;
     SetDataAtLocasStorageAndDisplay();
     input.value = '';
+    
+    updateBtn.classList.replace('d-block', 'd-none');
+    addBtn.classList.replace('d-none', 'd-block');
 }
 
 function DeleteTodo(index){
@@ -96,10 +99,6 @@ function HideModal(){
     body.removeChild(document.querySelector('.modal-backdrop'));
 }
 
-function toggleTodo() {
-    const li = document.querySelector('li');
-    li.classList.toggle('checked');
-}
 
 // ! Event Listeners
 addBtn.addEventListener('click', (e) => {
