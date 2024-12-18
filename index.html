@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <!-- * Inter Font - Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <!-- * Bootstrap CSS File -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- * Main Style sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <section class="container w-75 mx-auto my-5">
+        <h1 class="text-center my-5">To Do List</h1>
+
+        <form class="input-group w-50 mx-auto mb-3">
+            <input type="text" class="form-control" placeholder="Add New Task" />
+            <button id="liveToastBtn" class="btn btn-primary d-block add-btn">Add</button>
+            <button class="btn btn-primary d-none update-btn">Update</button>
+        </form>
+
+        <!-- the todo list -->
+        <ul id="todos" class="my-5 ">
+            <!-- List of tasks will be dynamically populated here -->
+        </ul>
+    </section>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>Are you sure</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger delete-btn">Delete</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Toast while adding -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body d-flex justify-content-between align-items-center">
+                <p class="mb-0">Task is added successfully.</p>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- * Bootstrap JS File -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- * Main JS File -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

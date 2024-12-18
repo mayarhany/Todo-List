@@ -1,0 +1,57 @@
+/* ? Global Style */
+body{
+    font-family: "Inter", serif;
+    color: #1c1c1c;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-block: 5px;
+    transition: all 0.3s;
+}
+li .task-text :first-child{
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 4px;
+}
+li .task-text :last-child{
+    margin-bottom: 4px;
+}
+.icons{
+    opacity: 0;
+    visibility: hidden;
+}
+.icon{
+    width: 20px;
+}
+li:hover{
+    transform: translateY(-5px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 5px #00000023;
+}
+li:hover .icons{
+    opacity: 1;
+    visibility: visible;
+}
+
+li.checked{
+    background-color: #eee;
+    border-radius: 5px;
+}
+li.checked .task-text :last-child{
+    color: #4e4e4e;
+    text-decoration: line-through;
+}
+li.checked .icons{
+    opacity: 0;
+    visibility: hidden;
+}
